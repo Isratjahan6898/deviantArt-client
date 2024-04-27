@@ -13,6 +13,8 @@ import Home from './Components/Home/Home';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import AddCraft from './Components/AddCraft/AddCraft';
 import MyArt from './Components/MyArt/MyArt';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path:"/myArt",
         element:<MyArt></MyArt>
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/register",
+        element:<Register></Register>
       }
     ]
   },

@@ -4,7 +4,7 @@ const ChooseUs = () => {
     return (
         <div className="bg-red-100">
             <h1 className="text-center font-bold text-5xl pt-[16px] mb-[30px]">User Feedback</h1>
-            <div className="flex flex-col lg:flex-row gap-[30px] lg:mx-[200px]">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-[30px] lg:mx-[200px]">
                     <div className="">
                     <div className="card w-96 h-[300px] bg-base-100 shadow-xl">
   <div className="card-body">

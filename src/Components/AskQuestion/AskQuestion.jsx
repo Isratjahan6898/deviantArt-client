@@ -5,7 +5,7 @@ const AskQuestion = () => {
         <div className="my-[70px] lg:mx-[100px]">
             <h1 className="text-center font-bold text-5xl mb-[40px]">Frequently Asked Questions</h1>
 
-            <div className="flex gap-[16px] justify-between ">
+            <div className="flex flex-col lg:flex-row gap-[16px] justify-between ">
 
 
                 <div className="flex gap-[10px]">

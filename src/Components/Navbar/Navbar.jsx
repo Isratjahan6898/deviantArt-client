@@ -29,9 +29,9 @@ const Navbar = () => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <li> <NavLink to="/">Home</NavLink></li>
-      <li><NavLink>Add Craft Item</NavLink></li>
-      <li> <NavLink>My Art&Craft List</NavLink></li>
+    <p> <NavLink to="/" className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#ff497C]':'font-bold text-black'}>Home</NavLink></p>
+      <p><NavLink to="/addCraft" className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#ff497C]': 'font-bold text-black'}  >Add Craft Item</NavLink></p>
+      <p> <NavLink to="/myArt" className={({isActive})=>isActive? 'font-bold text-[#FF497C] border-[#ff497C] ':'font-bold text-black'}>My Art&Craft List</NavLink></p>
       </ul>
     </div>
     <a className=" text-2xl text-[#FF497C] lg:text-4xl text-">DeviantArt</a>
@@ -39,9 +39,9 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu   menu-horizontal px-1">
       
-     <li className=" ml-[16px]"> <NavLink>Home</NavLink></li>
-     <li className=" ml-[16px]"> <NavLink>All Art & craft Items</NavLink></li>
-     <li className="ml-[16px]"><NavLink>Add Craft Item</NavLink></li>
+     <p className=" ml-[16px]"> <NavLink to='/' className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#FF497C]': 'font-bold text-black'}>Home</NavLink></p>
+     <p className=" ml-[16px]"> <NavLink to="/addCraft"  className={({isActive})=> isActive? 'font-bold text-[#FF497C]  border-[#ff497C]':'font-bold text-black'}>Add Craft Item</NavLink></p>
+     <p className="ml-[16px]"><NavLink  to="/myArt" className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#ff497C]':'font-bold text-black'}>My Art&Craft List</NavLink></p>
      
      
      
@@ -64,6 +64,9 @@ const Navbar = () => {
   <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
   
 </label>
+<div className="w-10 rounded-full">
+          <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        </div>
   <Link to="/login">  <btn className="btn bg-[#FF497C] text-white font-bold">Login</btn></Link>
   </div>
 </div>

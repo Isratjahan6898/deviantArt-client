@@ -11,6 +11,8 @@ import {
 import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import AddCraft from './Components/AddCraft/AddCraft';
+import MyArt from './Components/MyArt/MyArt';
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
       {
         path:"/",
         element: <Home></Home>
+      },
+      {
+        path:"/addCraft",
+        element: <AddCraft></AddCraft>
+      },
+      {
+        path:"/myArt",
+        element:<MyArt></MyArt>
       }
     ]
   },

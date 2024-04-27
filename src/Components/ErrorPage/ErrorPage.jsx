@@ -14,7 +14,7 @@ console.error(error);
       </p>
 
   <div className="text-center">
-  <button className="btn bg-lime-400 p-[20px] text-center font-bold text-white"> <Link to='/'>go Home</Link></button>
+  <Link to= "/"><button className="btn bg-lime-400 p-[20px] text-center font-bold text-white">go Home</button></Link>
   </div>
     </div>
         </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleTheme = (e)=>{
     if(e.target.checked){
-      setTheme('synthwave')
+      setTheme('dark')
     }else{
       setTheme('light')
     }
@@ -38,8 +38,10 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu   menu-horizontal px-1">
+
+    <p className=" ml-[16px]"> <NavLink to='/' className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#FF497C]': 'font-bold text-black'}>Home</NavLink></p>
       
-     <p className=" ml-[16px]"> <NavLink to='/' className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#FF497C]': 'font-bold text-black'}>Home</NavLink></p>
+     <p className=" ml-[16px]"> <NavLink to='/allArt' className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#FF497C]': 'font-bold text-black'}>All Art & craft Items</NavLink></p>
      <p className=" ml-[16px]"> <NavLink to="/addCraft"  className={({isActive})=> isActive? 'font-bold text-[#FF497C]  border-[#ff497C]':'font-bold text-black'}>Add Craft Item</NavLink></p>
      <p className="ml-[16px]"><NavLink  to="/myArt" className={({isActive})=> isActive? 'font-bold text-[#FF497C] border-[#ff497C]':'font-bold text-black'}>My Art&Craft List</NavLink></p>
      

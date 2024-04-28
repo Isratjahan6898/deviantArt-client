@@ -15,6 +15,8 @@ import AddCraft from './Components/AddCraft/AddCraft';
 import MyArt from './Components/MyArt/MyArt';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import AllArt from './Components/AllArt/AllArt';
+import AuthProvider from './Components/Providers/AuthProvider';
 
 
 const router = createBrowserRouter([
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/allArt",
+        element:<AllArt></AllArt>
       }
     ]
   },
@@ -49,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-<RouterProvider router={router} />
+<AuthProvider>
+  <RouterProvider router={router} />
+  </AuthProvider>
   </React.StrictMode>,
 )

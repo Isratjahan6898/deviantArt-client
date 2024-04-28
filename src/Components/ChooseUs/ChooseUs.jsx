@@ -7,7 +7,7 @@ const ChooseUs = () => {
             <div className="flex flex-col md:flex-row lg:flex-row gap-[30px] lg:mx-[200px]">
                     <div className="">
                     <div className="card w-96 h-[300px] bg-base-100 shadow-xl">
-  <div className="card-body">
+  <div className="card-body ">
       <h1 className="text-3xl"><FaCodePullRequest /></h1>
    
     <p className="font-bold ">I purchase a painting.It was outstanding and most beautifull painting I had ever seen. Thanks a lot for such a beautiful painting.. </p>

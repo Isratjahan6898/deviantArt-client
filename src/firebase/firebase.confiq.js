@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBIGCtBG79eEMCPr0Ffqa3w5GLtiAIw02U",
-  authDomain: "deviantart-project.firebaseapp.com",
-  projectId: "deviantart-project",
-  storageBucket: "deviantart-project.appspot.com",
-  messagingSenderId: "289830324690",
-  appId: "1:289830324690:web:064be41ead6c881a11a00b"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID ,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSANGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

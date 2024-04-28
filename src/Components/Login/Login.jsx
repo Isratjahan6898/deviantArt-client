@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Providers/AuthProvider";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
-  const {signIn} = useContext(AuthContex);
+  const {signIn,  googleLogin, githubLogin } = useContext(AuthContex);
   const location =useLocation();
   const navigate = useNavigate();
   console.log('location i in the login page', location)
@@ -18,11 +20,13 @@ const Login = () => {
         signIn(email, password)
         .then(result=>{
           console.log(result.user);
+          toast.success("user loging Create Successfully")
 
           navigate(location?. state? location.state : "/")
         })
         .catch(error=>{
           console.error(error);
+          toast.error("please give currect information")
         })
     }
     return (
@@ -58,12 +62,12 @@ const Login = () => {
 
       <div className="pb-[30px]">
   <div className="form-control mx-[30px] mt-6">
-          <button  
+          <button  onClick={()=>googleLogin()}
           className="btn bg-[#FF497c]">Google-login</button>
         </div>
 
         <div className="form-control mx-[30px] mt-6">
-          <button 
+          <button onClick={()=>  githubLogin()} 
          
           className="btn bg-[#FF497C]">GitHub login</button>
         </div>

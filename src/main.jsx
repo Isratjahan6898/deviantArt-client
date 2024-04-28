@@ -17,6 +17,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AllArt from './Components/AllArt/AllArt';
 import AuthProvider from './Components/Providers/AuthProvider';
+import PrivateRoute from './Components/Providers/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -31,11 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/addCraft",
-        element: <AddCraft></AddCraft>
+        element: <PrivateRoute><AddCraft></AddCraft></PrivateRoute>
       },
       {
         path:"/myArt",
-        element:<MyArt></MyArt>
+        element:<PrivateRoute><MyArt></MyArt></PrivateRoute>
       },
       {
         path:"/login",
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/allArt",
-        element:<AllArt></AllArt>
+        element:<PrivateRoute><AllArt></AllArt></PrivateRoute>
       }
     ]
   },

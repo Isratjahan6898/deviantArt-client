@@ -1,6 +1,39 @@
 
 
 const AddCraft = () => {
+
+    const handleAddProduct = (e)=>{
+        e.preventDefault();
+        const image = e.target.photo.value;
+        const item = e.target.item.value;
+        const subcategory = e.target.subcategory.value;
+        const price = e.target.price.value;
+        const rating = e.target.rating.value;
+        const customization = e.target.customization.value;
+        const time = e.target.time.value;
+        const stock = e.target.stock.value;
+        const email = e.target.email.value;
+        const name = e.target.name.value;
+        const description = e.target.descripton.value;
+         const craftItem ={image,item,subcategory,price,
+        rating, customization, time, stock, email, name, description};
+
+        console.log(craftItem)
+
+        fetch('http://localhost:5000/craft',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(craftItem)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+
+      
+    }
     return (
         <div className="my-[60px]">
       
@@ -11,7 +44,7 @@ const AddCraft = () => {
 
             <h1 className="text-center font-boldl lg:pt-[30px] lg:pb-[16px] text-4xl">Add Craft</h1>
            
-            <form  className="">
+            <form onSubmit={handleAddProduct}  className="">
                 <div className="flex flex-col md:flex-row lg:flex-row px-[30px] md:px-[60px] lg:px-[100px] md:gap-[20px] lg:gap-[30px]">
                 <div className="form-control">
           <label className="label">
@@ -68,7 +101,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Customization</span>
           </label>
-          <input type="text" name="cusomization" placeholder="Show Details" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="customization" placeholder="Show Details" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 

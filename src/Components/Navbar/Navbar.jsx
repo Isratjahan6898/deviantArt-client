@@ -1,10 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContex } from "../Providers/AuthProvider";
 
 
 const Navbar = () => {
 
   const [theme , setTheme]= useState('light');
+  const {user, logOut} =useContext(AuthContex);
+  console.log(user);
+
+  const handleLogout =()=>{
+       logOut()
+       .then()
+       .catch()
+  }
 
   useEffect(()=>{
     localStorage.setItem('theme',theme);
@@ -69,7 +78,18 @@ const Navbar = () => {
 <div className="w-10 rounded-full">
           <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
-  <Link to="/login">  <btn className="btn bg-[#FF497C] text-white font-bold">Login</btn></Link>
+
+
+
+        {
+          user? 
+          <btn onClick= {handleLogout}
+           className="btn bg-[#FF497C] text-white font-bold">LogOut</btn>
+          :
+
+          <Link to="/login">  <btn className="btn bg-[#FF497C] text-white font-bold">Login</btn></Link>
+        }
+ 
   </div>
 </div>
        </div>

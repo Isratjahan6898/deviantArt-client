@@ -1,5 +1,5 @@
 
-
+import Swal from 'sweetalert2'
 const AddCraft = () => {
 
     const handleAddProduct = (e)=>{
@@ -30,6 +30,14 @@ const AddCraft = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+            if(data.insertedId){
+              Swal.fire({
+                title: 'Success',
+                text: 'User Added successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+            }
         })
 
       
@@ -50,7 +58,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Image</span>
           </label>
-          <input type="text" name="photo" placeholder="CoffeeName" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="photo" placeholder="photo url" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
             
 
@@ -58,7 +66,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Item_name</span>
           </label>
-          <input type="text" name="item" placeholder="ChefName" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="item" placeholder="item_name" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 
@@ -70,7 +78,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Subcategory_name</span>
           </label>
-          <input type="text" name="subcategory" placeholder="Available Suplier" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="subcategory" placeholder="subcategory_name" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
             
 
@@ -78,7 +86,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">price</span>
           </label>
-          <input type="text" name="price" placeholder="text" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="price" placeholder="price" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 
@@ -93,7 +101,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Rating</span>
           </label>
-          <input type="text" name="rating" placeholder="Category" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="rating" placeholder="rating" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
             
 
@@ -101,7 +109,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Customization</span>
           </label>
-          <input type="text" name="customization" placeholder="Show Details" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="customization" placeholder="customization" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 
@@ -114,7 +122,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Processing_time</span>
           </label>
-          <input type="text" name="time" placeholder="Category" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="time" placeholder="processing_time" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
             
 
@@ -122,7 +130,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">StockStatus</span>
           </label>
-          <input type="text" name="stock" placeholder="Show Details" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="stock" placeholder="stockStatus" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 
@@ -134,7 +142,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">User Email</span>
           </label>
-          <input type="text" name="email" placeholder="Category" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="email" placeholder="email" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
             
 
@@ -142,7 +150,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">User Name</span>
           </label>
-          <input type="text" name="name" placeholder="Show Details" className="input w-[350px] lg:w-[350px] input-bordered" required />
+          <input type="text" name="name" placeholder="user name" className="input w-[350px] lg:w-[350px] input-bordered" required />
         </div>
 
 
@@ -155,7 +163,7 @@ const AddCraft = () => {
           <label className="label">
             <span className="label-text">Short Description</span>
           </label>
-          <input type="text" name="descripton" placeholder="Show Details" className="input 
+          <input type="text" name="descripton" placeholder="Shor description" className="input 
          md:w-[700px] w-[350px] p-[40px] input-bordered" required />
         </div>
           </div>

@@ -7,6 +7,7 @@ import HomeCard from "../HomeCard/HomeCard";
 
 const Home = () => {
     const crafts = useLoaderData();
+    const sliceCrafts = crafts.slice(0,6)
     return (
         <div>
            <Banner></Banner>
@@ -20,7 +21,7 @@ const Home = () => {
                       
                       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-[20px]">
                       {
-                        crafts.map(craft=> <HomeCard key={craft._id} craft={craft}></HomeCard>)
+                        sliceCrafts.map(craft=> <HomeCard key={craft._id} craft={craft}></HomeCard>)
                       }
                       </div>
                 

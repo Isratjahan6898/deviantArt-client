@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const HomeCard = ({craft}) => {
-    console.log(craft);
-    const{image,item,subcategory,price,
+    // console.log(craft);
+    const{_id,image,item,subcategory,price,
         rating, customization, time, stock, email, name, description}= craft;
     return (
         <div>
@@ -14,7 +15,10 @@ const HomeCard = ({craft}) => {
     <h2 className="card-title">{item}</h2>
     <p>{description}</p>
     <div className="card-actions">
+      <Link to={`/craft/${_id}`}>
       <button className="btn bg-[#FF497C] text-white font-bold">Show details</button>
+      
+      </Link>
     </div>
   </div>
 </div>

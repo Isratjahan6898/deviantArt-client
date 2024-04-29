@@ -18,8 +18,9 @@ import Register from './Components/Register/Register';
 import AllArt from './Components/AllArt/AllArt';
 import AuthProvider from './Components/Providers/AuthProvider';
 import PrivateRoute from './Components/Providers/PrivateRoute/PrivateRoute';
-import HomeDetails from './Components/HomeDetails/HomeDetails';
+
 import CraftDetails from './Components/CraftDetails/CraftDetails';
+import Update from './Components/Update/Update';
 
 
 const router = createBrowserRouter([
@@ -54,10 +55,10 @@ const router = createBrowserRouter([
         element:<PrivateRoute><AllArt></AllArt></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/craft')
       },
-      // {
-      //   path:'/craft/:id',
-      //   element:<HomeDetails></HomeDetails>
-      // },
+      {
+        path:'/update',
+        element:<Update></Update>
+      },
       {
         path:'/craft/:id',
         element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>

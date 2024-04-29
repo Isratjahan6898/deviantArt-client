@@ -36,7 +36,7 @@ const AllArt = () => {
         <td>{craft.price}</td>
         <td>
             
-            <Link to={`/craft/:${craft._id}`}><button className="btn bg-[#FF497C] text-white font-bold">View Details</button></Link>
+            <Link to={`/craft/${craft._id}`}><button className="btn bg-[#FF497C] text-white font-bold">View Details</button></Link>
         
         </td>
       </tr>

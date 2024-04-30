@@ -10,7 +10,7 @@ const CraftDetails = () => {
     const [products, setProducts]= useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/craft-by-id/${id}`)
+        fetch(`https://deviant-art-project-server.vercel.app/craft-by-id/${id}`)
         .then(res=>res.json())
         .then(data=>{
             

@@ -20,7 +20,7 @@ const AddCraft = () => {
 
         console.log(craftItem)
 
-        fetch('http://localhost:5000/craft',{
+        fetch('https://deviant-art-project-server.vercel.app/craft',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

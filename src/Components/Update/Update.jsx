@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {  useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -10,7 +10,7 @@ const Update = () => {
    
 
     useEffect(()=>{
-      fetch(`http://localhost:5000/craft-by-id/${data.id}`)
+      fetch(`https://deviant-art-project-server.vercel.app//craft-by-id/${data.id}`)
 
       .then(res => res.json())
       .then(data => {
@@ -41,7 +41,7 @@ const Update = () => {
 
         console.log(craftItem);
 
-        fetch(`http://localhost:5000/craft/${update._id}`,{
+        fetch(`https://deviant-art-project-server.vercel.app/craft/${update._id}`,{
             method:"PUT",
             headers:{
                 "content-type": "application/json"

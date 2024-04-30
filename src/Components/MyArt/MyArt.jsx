@@ -13,7 +13,7 @@ const MyArt = () => {
 
     useEffect(()=>{
 
-        fetch(`http://localhost:5000/craft/${user?.email}`)
+        fetch(`https://deviant-art-project-server.vercel.app/craft/${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             setCrafts(data);
@@ -34,7 +34,7 @@ const MyArt = () => {
         }).then((result) => {
           if (result.isConfirmed) {
   
-            fetch(`http://localhost:5000/craft/${id}`,{
+            fetch(`https://deviant-art-project-server.vercel.app/${id}`,{
               method: 'DELETE'
             })
             .then(res=>res.json())

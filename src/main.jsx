@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader:()=>fetch('https://deviant-art-project-server.vercel.app/craft')
       },
       {
         path:"/addCraft",
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       {
         path:"/allArt",
         element:<PrivateRoute><AllArt></AllArt></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader:()=>fetch('https://deviant-art-project-server.vercel.app/craft')
       },
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/craft-by-id/${params.id}`)
+        loader:({params})=>fetch(`https://deviant-art-project-server.vercel.app/craft-by-id/${params.id}`)
       },
       {
         path:'/craft/:id',

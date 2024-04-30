@@ -11,7 +11,10 @@
 - **Social Interaction:** Engage with your audience by allowing comments and feedback on your artwork, fostering a sense of community.
 - **Commission Information:** Provide details about your commission availability, rates, and terms to attract potential clients and collaborators.
 
-## Package Nme
+## Package Name
+
+- **React-tooltip
+- **React Aweosome reveal
 
 
 

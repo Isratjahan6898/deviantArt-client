@@ -4,6 +4,7 @@ import { AuthContex } from "../Providers/AuthProvider";
 
 
 
+
 const Navbar = () => {
 
   const [theme , setTheme]= useState('light');
@@ -84,8 +85,10 @@ const Navbar = () => {
           user?.email? 
           <div className="flex">
 
-<div className="w-10 rounded-full tooltip"  data-tip={user.displayName} >
-       
+<div className="w-10 rounded-full tooltip " data-tip={user.displayName} >
+
+
+      
           <img className="rounded-full "  alt="image" src={user ?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
           {/* <ReactTooltip /> */}
         </div>

@@ -3,46 +3,46 @@ import { MdAttachMoney } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ShowmyCard = ({craft}) => {
+const ShowmyCard = ({craft, handleDelete}) => {
 
     const{_id,image,item,subcategory,price,
         rating, customization, time, stock, email, name, description}= craft;
     console.log(craft);
 
-    const handleDelete = _id =>{
-      console.log(_id)
+    // const handleDelete = _id =>{
+    //   console.log(_id)
 
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-      }).then((result) => {
-        if (result.isConfirmed) {
+    //   Swal.fire({
+    //     title: "Are you sure?",
+    //     text: "You won't be able to revert this!",
+    //     icon: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonColor: "#3085d6",
+    //     cancelButtonColor: "#d33",
+    //     confirmButtonText: "Yes, delete it!"
+    //   }).then((result) => {
+    //     if (result.isConfirmed) {
 
-          fetch(`http://localhost:5000/craft/${_id}`,{
-            method: 'DELETE'
-          })
-          .then(res=>res.json())
-          .then(data =>{
-            console.log(data)
-            if (data.deletedCount > 0){
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-              });
-            }
-          })
+    //       fetch(`http://localhost:5000/craft/${_id}`,{
+    //         method: 'DELETE'
+    //       })
+    //       .then(res=>res.json())
+    //       .then(data =>{
+    //         console.log(data)
+    //         if (data.deletedCount > 0){
+    //           Swal.fire({
+    //             title: "Deleted!",
+    //             text: "Your file has been deleted.",
+    //             icon: "success"
+    //           });
+    //         }
+    //       })
          
        
-        }
-      });
+    //     }
+    //   });
 
-    }
+    // }
     return (
         <div>
             <div className="card h-[750px] bg-base-100 shadow-xl">
@@ -78,7 +78,7 @@ const ShowmyCard = ({craft}) => {
 
 
     <div className="card-actions mt-[20px] justify-end">
-     <Link> <btn className="btn bg-[#FF497C] text-white font-bold">Update</btn> </Link>
+     <Link to={`/update/${_id}`}> <btn className="btn bg-[#FF497C] text-white font-bold">Update</btn> </Link>
       <btn 
         onClick={()=>handleDelete(_id)}
       className="btn bg-[#FF497C] text-white font-bold">delete</btn>

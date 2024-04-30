@@ -84,8 +84,10 @@ const Navbar = () => {
           user?.email? 
           <div className="flex">
 
-<div className="w-10 rounded-full tooltip" data-tip={user.displayName}>
-          <img className="rounded-full " data-tip="hello" alt="Tailwind CSS Navbar component" src={user ?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
+<div className="w-10 rounded-full tooltip"  data-tip={user.displayName} >
+       
+          <img className="rounded-full "  alt="image" src={user ?.photoURL ||"https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" } />
+          {/* <ReactTooltip /> */}
         </div>
           <btn onClick= {handleLogout}
            className="btn bg-[#FF497C] text-white font-bold">LogOut</btn>

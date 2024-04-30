@@ -1,8 +1,17 @@
-# React + Vite
+# DeviantArt Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [YourPortfolio.deviantart.com](https://YourPortfolio.deviantart.com)
 
-Currently, two official plugins are available:
+**Category: Digital Art**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+- **Gallery Display:** Showcase your digital artwork in a visually appealing gallery format.
+- **Customizable Profile:** Personalize your profile with a unique avatar, banner, and bio to reflect your style and personality.
+- **Artwork Categories:** Organize your artwork into different categories such as illustrations, digital paintings, sketches, and more for easy navigation.
+- **Social Interaction:** Engage with your audience by allowing comments and feedback on your artwork, fostering a sense of community.
+- **Commission Information:** Provide details about your commission availability, rates, and terms to attract potential clients and collaborators.
+
+## Package Nme
+
+
+

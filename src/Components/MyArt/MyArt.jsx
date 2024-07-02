@@ -33,6 +33,7 @@ const MyArt = () => {
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
+            //https://deviant-art-project-server.vercel.app
   
             fetch(`https://deviant-art-project-server.vercel.app/${id}`,{
               method: 'DELETE'
@@ -46,8 +47,7 @@ const MyArt = () => {
                   text: "Your file has been deleted.",
                   icon: "success"
                 }
-                // const remaining = crafts.filter(craft => craft._id !== id);
-                // setMyToys(remaining);
+               
             
             );
             const remaining = crafts.filter(craft => craft._id !== id);
